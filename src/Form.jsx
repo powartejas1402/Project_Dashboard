@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import axios from 'axios';
 
 const Form = () => {
 
@@ -15,6 +16,9 @@ const Form = () => {
         msg : '',
     });
 
+    const [file, setFile] = useState(); 
+    const [name, setName] = useState();
+
     const InputEvent = (event) => {
         const {name, value} = event.target;
         setData((preValue) => {
@@ -25,9 +29,21 @@ const Form = () => {
         });
     };
 
+    
+
     const formSubmit = (e) => {
+        let info = [data, name, file];
+        console.log(info);
         e.preventDefault();
-        alert(`First-Name: ${data.firstname}, Last-name: ${data.lastname}, EmployeeID: ${data.empid}, Message: ${data.msg}`);
+        console.log(data);
+        alert(`First-Name: ${data.firstname}, Last-name: ${data.lastname}, EmployeeID: ${data.empid}, Message: ${data.msg}, File-type: ${file}, File: ${name}`);
+        axios.post("https://intense-beach-75357.herokuapp.com/file" , info)
+            .then(response =>{
+                console.log(response)
+            })
+            .catch(error => {
+                console.log(error)
+            })
     };
 
     return (
@@ -47,18 +63,45 @@ const Form = () => {
                         <label for="employeeid" className="form-label">Employee ID</label>
                         <input type="number" className="form-control" id="employeeid" name="empid" onChange={InputEvent} value={data.empid} placeholder="Enter your Employee ID" required />
                     </div>
+                    <div className="mb-3">
+                        <label for="filetype" className="form-label">Select your file types</label>
+                        <select 
+                            id="filetype" 
+                            value={file}   
+                            name="type" 
+                            onChange={(event) => {
+                                setFile(event.target.value);
+                            }}
+                            className="form-select" required> 
+                            <option selected></option>
+                            <option value="DOC">DOC</option>
+                            <option value="PDF">PDF</option>
+                            <option value="MP4">MP4</option>
+                            <option value="JPG">JPG</option>
+
+                        </select>
+                        
+                    </div>
                     <div style = {{border : '0px'}}>
-                        <label for="selectfile" className="form-label">Upload your files in (.doc, .jpg, .pdf, .mp4)</label>
+                        <label for="selectfile" className="form-label">Upload your file</label>
                         <br />
-                        <input type="file" id="selectfile" accept=".pdf, .jpg, .doc, .mp4" required/>
+                        <input 
+                            type="file" 
+                            value={name} 
+                            name="filename" 
+                            onChange={(event) => {
+                                setName(event.target.value);
+                            }} 
+                            id="selectfile" 
+                            accept={`.${file}`} />
                     </div>
                     <br />
                     <div className="mb-3">
                         <label for="exampleFormControlTextarea1" className="form-label">Any message?</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" name="msg" onChange={InputEvent} value={data.msg} placeholder="Enter your message..." rows="3"></textarea>
                     </div>
-                    <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    <div className="col-12">
+                        <button className="btn btn-success" type="submit">Submit form</button>
                     </div>
                 </div>
             </form>
