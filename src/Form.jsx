@@ -34,7 +34,7 @@ const Form = () => {
         <>
             <h1 style={style_form}> Send us your Files! </h1>
             <form onSubmit={formSubmit}>
-                <div className="col-6 p-5">
+                <div className="col-lg-6 p-5 col-10">
                     <div className="mb-3">
                         <label for="firstname" className="form-label">First Name</label>
                         <input type="text" className="form-control" id="firstname" name="firstname" onChange={InputEvent} value={data.firstname} placeholder="Enter your first name" required />
