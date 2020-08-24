@@ -48,7 +48,7 @@ const Form = () => {
                         <input type="number" className="form-control" id="employeeid" name="empid" onChange={InputEvent} value={data.empid} placeholder="Enter your Employee ID" required />
                     </div>
                     <div style = {{border : '0px'}}>
-                        <label for="selectfile" className="form-label">Upload your files</label>
+                        <label for="selectfile" className="form-label">Upload your files in (.doc, .jpg, .pdf, .mp4)</label>
                         <br />
                         <input type="file" id="selectfile" accept=".pdf, .jpg, .doc, .mp4" required/>
                     </div>
