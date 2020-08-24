@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 
@@ -19,6 +19,8 @@ const Form = () => {
     const [file, setFile] = useState(); 
     const [name, setName] = useState();
 
+
+
     const InputEvent = (event) => {
         const {name, value} = event.target;
         setData((preValue) => {
@@ -29,21 +31,30 @@ const Form = () => {
         });
     };
 
-    
-
     const formSubmit = (e) => {
-        let info = [data, name, file];
-        console.log(info);
+
+        const formData = new FormData();
+        formData.append('First-Name', data.firstname);
+        formData.append('Last-name', data.lastname);
+        formData.append('Employee Id', data.empid);
+        formData.append('File Type', file);
+        formData.append(`${file} Image`, name);
+
+        // let info = [data, name, file];
+        //console.log(formData);
         e.preventDefault();
-        console.log(data);
+        //console.log(data);
+        console.log(formData);
         alert(`First-Name: ${data.firstname}, Last-name: ${data.lastname}, EmployeeID: ${data.empid}, Message: ${data.msg}, File-type: ${file}, File: ${name}`);
-        axios.post("https://intense-beach-75357.herokuapp.com/file" , info)
+
+
+        axios.post("https://intense-beach-75357.herokuapp.com/file" , formData)
             .then(response =>{
                 console.log(response)
             })
             .catch(error => {
                 console.log(error)
-            })
+            });    
     };
 
     return (
