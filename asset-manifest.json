@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Project_Dashboard/static/css/main.5f361e03.chunk.css",
-    "main.js": "/Project_Dashboard/static/js/main.78d94fcd.chunk.js",
-    "main.js.map": "/Project_Dashboard/static/js/main.78d94fcd.chunk.js.map",
+    "main.css": "/Project_Dashboard/static/css/main.d2645bc4.chunk.css",
+    "main.js": "/Project_Dashboard/static/js/main.138abfad.chunk.js",
+    "main.js.map": "/Project_Dashboard/static/js/main.138abfad.chunk.js.map",
     "runtime-main.js": "/Project_Dashboard/static/js/runtime-main.c805b0fc.js",
     "runtime-main.js.map": "/Project_Dashboard/static/js/runtime-main.c805b0fc.js.map",
     "static/css/2.75c4ecca.chunk.css": "/Project_Dashboard/static/css/2.75c4ecca.chunk.css",
-    "static/js/2.475495c6.chunk.js": "/Project_Dashboard/static/js/2.475495c6.chunk.js",
-    "static/js/2.475495c6.chunk.js.map": "/Project_Dashboard/static/js/2.475495c6.chunk.js.map",
+    "static/js/2.7834dcc3.chunk.js": "/Project_Dashboard/static/js/2.7834dcc3.chunk.js",
+    "static/js/2.7834dcc3.chunk.js.map": "/Project_Dashboard/static/js/2.7834dcc3.chunk.js.map",
     "index.html": "/Project_Dashboard/index.html",
-    "precache-manifest.f3a93881b3001ea393067942d82d9cfe.js": "/Project_Dashboard/precache-manifest.f3a93881b3001ea393067942d82d9cfe.js",
+    "precache-manifest.ea51304c0baf11b102575a076e87ef11.js": "/Project_Dashboard/precache-manifest.ea51304c0baf11b102575a076e87ef11.js",
     "service-worker.js": "/Project_Dashboard/service-worker.js",
     "static/css/2.75c4ecca.chunk.css.map": "/Project_Dashboard/static/css/2.75c4ecca.chunk.css.map",
-    "static/css/main.5f361e03.chunk.css.map": "/Project_Dashboard/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.475495c6.chunk.js.LICENSE.txt": "/Project_Dashboard/static/js/2.475495c6.chunk.js.LICENSE.txt",
+    "static/css/main.d2645bc4.chunk.css.map": "/Project_Dashboard/static/css/main.d2645bc4.chunk.css.map",
+    "static/js/2.7834dcc3.chunk.js.LICENSE.txt": "/Project_Dashboard/static/js/2.7834dcc3.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/Project_Dashboard/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c805b0fc.js",
     "static/css/2.75c4ecca.chunk.css",
-    "static/js/2.475495c6.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.78d94fcd.chunk.js"
+    "static/js/2.7834dcc3.chunk.js",
+    "static/css/main.d2645bc4.chunk.css",
+    "static/js/main.138abfad.chunk.js"
   ]
 }
