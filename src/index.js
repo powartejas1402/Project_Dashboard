@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import Form from './Form';
 import * as serviceWorker from './serviceWorker';
+import Navbar from './Navbar';
 
 ReactDOM.render(
   <>
-    <Form />
+    <Navbar/>
   </>,
   document.getElementById('root')
 );
